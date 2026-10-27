@@ -1,10 +1,10 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "./assets/vite.svg";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <div className="bg-neutral-800 min-h-screen flex flex-col justify-center items-center text-center">
@@ -13,7 +13,7 @@ function App() {
         <img
           src={reactLogo}
           className="w-24 h-24 animate-spin"
-          style={{ animationDuration: '10s' }}
+          style={{ animationDuration: "10s" }}
           alt="React logo"
         />
       </div>
@@ -36,7 +36,7 @@ function App() {
         Edit <code>src/App.jsx</code> and save to test HMR
       </p>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
