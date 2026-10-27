@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function UserCard(props) {
-  const { name, email, street, city } = props;
+  const { name, email, street, city, ...rest } = props;
   const [clicked, setClicked] = useState(false);
 
   return (
@@ -19,6 +19,13 @@ function UserCard(props) {
       <p className="text-gray-600">
         <span className="font-medium">Address:</span> {street}, {city}
       </p>
+
+      {/* Menampilkan data tambahan dari rest jika ada */}
+      {Object.entries(rest).map(([key, value]) => (
+        <p key={key} className="text-gray-600">
+          <span className="font-medium capitalize">{key}:</span> {String(value)}
+        </p>
+      ))}
 
       <button
         className={`${clicked ? "bg-special-green" : "bg-gray-01"} text-white p-2 rounded-md`}
